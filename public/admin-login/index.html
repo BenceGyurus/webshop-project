@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/admin-login/style.css" />
+</head>
+<body>
+    <div id = "header">
+        <h1>Bejelentkezés</h1>
+    </div>
+    <div id = "conteiner">
+        <label for="mail" class = "label" id = "mail_Label">E-mail cím</label>
+        <br>
+        <input type="text" id = "mail" class = "input" />
+        <br>
+        <label for="password" class = "label" >Jelszó</label>
+        <br>
+        <input type="password" id="password" class = "input" id = "password_Label"/>
+        <br>
+        <input type="button" value="Bejelentkezés" onclick = "login()" class = "input" />
+    </div>
+    <div id = "footer"></div>
+</body>
+<script src="/admin-login/main.js"></script>
+<script src="/js/ajax.js"></script>
+</html>

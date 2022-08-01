@@ -1,0 +1,5 @@
+{   
+    "/" : "/main/index.html",
+    "/kezdolap" : "/main/index.html",
+    "/admin-bejelentkezes" : "/admin-login/index.html"
+}
