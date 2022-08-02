@@ -14,13 +14,13 @@ app.get("/", (req,res)=> {
     res.send(functions.parseBody(req.body));
 })*/
 
-app.use((req,res)=>{
+/*app.use((req,res)=>{
     if (req.method == "GET"){
     let file_Name = path_Selector(req.url);
     res.sendFile(file_Name ? file_Name : `${__dirname}/public/error/index.html`);
     }else{
         next();
     }
-});
+});*/
 
 app.listen(8000);
