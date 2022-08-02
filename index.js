@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
-const path_Selector = require("./path_Selector.js");
+//const path_Selector = require("./path_Selector.js");
 //const bodyParser = require("body-parser");
 //const functions = require("./functions.js");
+
+function path_Selector(){
+
+}
+
 app.get("/", (req,res)=> {
-    console.log(req.url);
     res.sendFile(`${__dirname}/public/main/index.html`);
 });
 
@@ -23,4 +27,4 @@ app.get("/", (req,res)=> {
     }
 });*/
 
-app.listen(8000);
+app.listen(4000);
