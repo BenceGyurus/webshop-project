@@ -1,0 +1,27 @@
+.admin_User_Div{
+    width: max-content;
+    max-width: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-table;
+    margin: 20px;
+}
+
+.li_Tag{
+    list-style: none;
+    margin: 3px;
+    padding: 2px;
+    border-bottom: 1px solid black;
+}
+
+#new_User_Div{
+    display:none;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}

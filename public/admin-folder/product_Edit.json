@@ -1,0 +1,1 @@
+{"data" : [["name", "Termék neve", "s"], ["description", "Termék leírása", "s"], ["price", "Termék ára", "n"], ["stock", "Raktáron lévő száma", "n"], ["image", "Fénykép <a href = '/image_Info'>több info</a>", "image"]]}

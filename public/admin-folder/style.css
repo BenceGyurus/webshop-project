@@ -1,0 +1,34 @@
+body{
+    padding: 0px;
+}
+#menu{
+    width: 20%;
+    display: inline-table;
+    margin: 0px;
+    padding: 0px;
+    max-width: 150px;
+}
+
+.menu_Tags{
+    list-style: none;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu_Grid{
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+#conteiner{
+    display: inline-table;
+    width: 75%;
+    margin: 0px;
+    margin-left: 3%;
+    text-align: center;
+}

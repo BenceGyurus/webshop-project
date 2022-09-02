@@ -1,0 +1,43 @@
+.product_Grid{
+    padding: 30px;
+    width: max-content;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-table;
+}
+
+#edit_Panel{
+    width: 30%;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+    padding: 20px;
+}
+
+.edit_Label{
+    display: block;
+    padding: 2px;
+    margin: 3px;
+}
+
+.close_Button{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: transparent;
+    color: red;
+    position: relative;
+    border: none;
+    left: 50%;
+    font-weight: bold;
+    top: -15px;
+    font-size: 18px;
+}
+
+.product_Image{
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+}

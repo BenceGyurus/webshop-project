@@ -1,5 +1,10 @@
 {   
     "/" : "/main/index.html",
     "/kezdolap" : "/main/index.html",
-    "/admin-bejelentkezes" : "/admin-login/index.html"
+    "/admin-bejelentkezes" : "/admin-login/index.html",
+    "/admin" : "/admin-folder/index.html",
+    "/basic" : "/admin-folder/html/basic.html",
+    "/add-product" : "/admin-folder/html/add_Products.html",
+    "/product_Edit" : "/admin-folder/product_Edit.json",
+    "/editors" : "/admin-folder/html/editors.html"
 }

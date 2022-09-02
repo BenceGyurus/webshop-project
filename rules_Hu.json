@@ -1,0 +1,6 @@
+{
+    "add_Product" : ["Termékek hozzáadása és szerkesztése", "/add-product"],
+    "orders" : ["Rendelések megtekintése", "/orders"],
+    "edit_ASZF" : ["Általános szerződési feltétlek módosítása", "/edit-aszf"],
+    "add_Editor": ["Szerkesztők hozzáadása és törlése", "/editors"]
+}

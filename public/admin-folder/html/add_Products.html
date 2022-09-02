@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/admin-folder/styles/add_Products.css">
+</head>
+<body>
+    <div id = "products"></div>
+    <div id="edit_Panel">
+        <label for="name">Termék neve</label>
+        <br>
+        <input type="text" id = "name" class = "product_Input" />
+        <br>
+        <label for="">Termék leírása</label>
+        <br>
+        <textarea name="desciption_Of_Product" id="description" cols="30" rows="10"></textarea>
+        <br>
+        <label for="price">Termék ára</label>
+        <br>
+        <input type="number" name="price" id="price" />
+        <br>
+        <label for="stock">Raktár</label>
+        <br>
+        <input type="number" name="stock" id="stock" />
+        <br>
+        <label for="image">Kép</label>
+        <br>
+        <input type="text" id = "image" />
+        <input type="button" value="Mentés" onclick = "edit()">
+    </div>
+    <div id = "control">
+        <input type="button" value="+" onclick = "generate_Edit_Panel()"/>
+    </div>
+</body>
+</html>
