@@ -38,7 +38,7 @@ class functions{
             }
         }
         let date = new Date().getTime();
-        new_Product.details.edited = {user : {name : user.name, id : user._id, mail : user.mail}, date : date};
+        new_Product.details.edited = {user : {name : user.name, id : user._id, mail : user.mail}, date : date, id : this.generate_token(100)};
         return new_Product;
     }
     static get_Delted_Product(product){
@@ -47,6 +47,23 @@ class functions{
             Object.keys(product)[i] != "_id" ? new_Product[Object.keys(product)[i]] = product[Object.keys(product)[i]] : "";
         }
         return product;
+    }
+    static xss_Resist(data){
+        let chars = JSON.parse(this.open_Json("/html_Symbols.json"));
+        console.log(chars);
+        let new_String = "";
+        for (let i = 0; i < data.length; i++){
+            new_String += chars[data[i]] ? "" : data[i];
+        }
+        return new_String;
+    }
+    static replace_Chars(string){
+        let chars = JSON.parse(this.open_Json("/replace_Chars.json"));
+        let new_String = "";
+        for (let i = 0; i < string.length; i++){
+            new_String += chars[string[i]] ? chars[string[i]] : string[i];
+        }
+        return new_String;
     }
 }
 module.exports = functions;

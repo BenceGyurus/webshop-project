@@ -17,6 +17,24 @@
         <div id = "add_Accesses"></div>
         <input type="button" value="Link kérése" onclick = "get_New_User_Link()"/>
     </div>
+    <div id="link_Of_New_User">
+        <input type="button" value = "X" onclick = "close_Link()" class = "close"/>
+        <h3>A regszisztráció a linken kersztül lehetséges, a link lejár <span id = "validity"></span></h3>
+        <input type="text" id = "link_Input" readonly />
+        <input type="button" value="Másolás" onclick = "copy()" />
+    </div>
+    <div id = "edit_Profile">
+        <h1><span id = "name_Of_User"></span> felhasználó szerkesztése</h1>
+        <div id="edit_Short_Cuts"></div>
+        <div id = "accesses"></div>
+        <label for="">Felhasználói adatok</label>
+        <div id = "user_Data"></div>
+        <div id = "control_Buttons">
+            <input type="button" value="Felhasználó törlése" />
+            <input type="button" value="Mégsem" onclick = "close_Edit_Admin()" id = "close"/>
+        </div>
+        <div id="save_Button"></div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>

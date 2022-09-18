@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/registration/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Regisztráció</h1>
+    </div>
+    <div id = "conteiner">
+        <label for="name">Teljes név</label>
+        <br>
+        <input type="text" id = "name" />
+        <br>
+        <label for="mail">E-mail cím</label>
+        <br>
+        <input type="text" id = "mail" />
+        <br>
+        <label for="password">Jelszó</label>
+        <br>
+        <input type="text" id = "password" />
+        <br>
+        <label for="re_Password">Jelszó újra</label>
+        <br>
+        <input type="text" id = "re_Password" />
+        <br>
+        <input type="button" value="Regisztráció" onclick = "control_Datas()">
+    </div>
+</body>
+<script src="/cookies/cookie.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/registration/main.js"></script>
+</html>

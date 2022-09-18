@@ -7,6 +7,7 @@
 <body>
     <div id = "products"></div>
     <div id="edit_Panel">
+        <input type="button" value="X" onclick = "close_Edit_Panel()" class = "close_Button" id = "close_Button" />
         <label for="name">Termék neve</label>
         <br>
         <input type="text" id = "name" class = "product_Input" />
@@ -26,10 +27,16 @@
         <label for="image">Kép</label>
         <br>
         <input type="text" id = "image" />
+        <br>
+        <label for="public">Publikus</label>
+        <input type="checkbox" name="public" id="public" class = "checkbox"/>
+        <br>
+        <select name="versions" id="versions"></select>
+        <br>
         <input type="button" value="Mentés" onclick = "edit()">
     </div>
     <div id = "control">
-        <input type="button" value="+" onclick = "generate_Edit_Panel()"/>
+        <input type="button" value="+" onclick = "show_Edit_Panel()"/>
     </div>
 </body>
 </html>

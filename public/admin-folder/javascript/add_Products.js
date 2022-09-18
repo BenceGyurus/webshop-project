@@ -61,6 +61,7 @@ function edit(){
     console.log(lambda);
     }
     else{
+        show_Element("edit_Panel");
         let object = {token : parseCookies().long_Token};
         error = false;
         for (let i = 0; i < window.edit_List.length; i++){
@@ -75,6 +76,28 @@ function edit(){
     }
 }
 
+function show_Edit_Panel(){
+    show_Element("edit_Panel");
+    for (let i = 0; i < window.edit_List.length; i++){
+        add_Value("", window.edit_List[i][0]);
+    }
+}
+
+function load_Old_Version(product){
+    show_Element("edit_Panel");
+    try{product = JSON.parse(product);}catch{}
+    if (window.edit_List){
+        for (let i = 0; i < window.edit_List.length; i++){
+            add_Value(product[window.edit_List[i][0]], window.edit_List[i][0]);
+        }
+        reset_Color_Of_Borders();
+        get_Element(product_Id).style.border = "1px solid blue";
+        }
+        else{
+            //error "Hiba történt az oldal betöltésekor"
+        }
+}
+
 
 function reset_Color_Of_Borders(){
     for (let i = 0; i < Object.keys(window.object_Products).length; i++){
@@ -82,23 +105,41 @@ function reset_Color_Of_Borders(){
     }
 }
 
-function edit_This(product_Id){
-    window.selected_Id = product_Id;
+function load_Edit_Panel(product){
     show_Element("edit_Panel");
+    try{product = JSON.parse(product);}catch{}
     if (window.edit_List){
         for (let i = 0; i < window.edit_List.length; i++){
-            console.log(window.edit_List[i][0]);
-            add_Value(window.object_Products[product_Id][window.edit_List[i][0]], window.edit_List[i][0]);
+            add_Value(product[window.edit_List[i][0]], window.edit_List[i][0]);
         }
+        let html = `<option name = "default" value = "default" id = "default">Jelenlegi verzió</option>`;
+        for (let i = product.versions.length-1; i > 0; i--){
+            html += `<option name = "${product.versions[i].version_Id}" value = "${product.versions[i].version_Id}" id = "${product.versions[i].version_Id}">${new Date(product.versions[i].date)}</option>`
+        }
+        console.log(html);
+        let select = document.getElementById("versions");
+        select.addEventListener("change", ()=>{
+            select.value != "default" ? ajax("POST", `/get_This_Version/${select.value}`, load_Old_Version, JSON.stringify({token : parseCookies().long_Token})) : load_Edit_Panel(window.object_Products[window.selected_Id]);
+        });
+        show_Element("versions");
+        html ? document.getElementById("versions").innerHTML = html : "";
         reset_Color_Of_Borders();
         get_Element(product_Id).style.border = "1px solid blue";
-    }else{
-        //ERROR "Hiba történt az oldal betöltése közben"
-    }
+        }
+        else{
+            //error "Hiba történt az oldal betöltésekor"
+        }
+}
+
+function edit_This(product_Id){
+    window.selected_Id = product_Id;
+    load_Edit_Panel(window.object_Products[window.selected_Id]);
 }
 
 function close_Edit_Panel(){
+    window.selected_Id = "";
     if (get_Element("edit_Panel").style.display != "none"){
+    hide_Element("versions");
     hide_Element("edit_Panel");
     reset_Color_Of_Borders();
     }
